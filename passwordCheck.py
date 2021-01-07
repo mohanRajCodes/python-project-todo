@@ -22,7 +22,7 @@ class authentication:
         checkuser = dbIntiate.dbConnect("user_details","authenticate")
         print ("here i come")
         
-        self.output = checkuser.findOne(self.usr)
+        self.output = checkuser.findUser(self.usr,"name")
         if self.output:
             if self.output['name'] == self.usr:
                 return "200"
